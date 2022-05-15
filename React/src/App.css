@@ -1,0 +1,16 @@
+/* on definit les variables css */
+:root {
+  --font: 'Montserrat', sans-serif;
+  --dark-blue: #26124E;
+ }
+ html {
+   scroll-behavior: smooth;
+ }
+ body {
+   background-color: red;
+   font-family: var(--font) !important;
+ }
+ a {
+   text-decoration: none;
+ }
+ 
