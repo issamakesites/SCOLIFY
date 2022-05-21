@@ -7,7 +7,7 @@ export class MesEleves extends Component {
   render() {
     return (
         <div className='parent-dashboard'>
-        <ParentSidebar>
+        <ParentSidebar active="classes">
         </ParentSidebar>
         <Navbar breadcrumbs='Tableau de bord/ Mes eleves'></Navbar>
         <div className='parent-dashboard-widgets'>

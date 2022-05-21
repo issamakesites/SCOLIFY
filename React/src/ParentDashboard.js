@@ -17,7 +17,7 @@ export class ParentDashboard extends Component {
       if(role == 'parent')
   return (
     <div className='parent-dashboard'>
-      <ParentSidebar>
+      <ParentSidebar active="home">
       </ParentSidebar>
       <Navbar breadcrumbs='Tableau de bord'></Navbar>
       <h1 className='Welcome-name'>Bonjour Mr. {currentname}</h1> 
@@ -40,7 +40,7 @@ export class ParentDashboard extends Component {
       if(role == 'eleve')
   return (
     <div className='parent-dashboard'>
-      <ParentSidebar>
+      <ParentSidebar active="home">
       </ParentSidebar>
       <Navbar breadcrumbs='Tableau de bord'></Navbar>
       <h1 className='Welcome-name'>Bonjour {currentname}</h1> 
@@ -63,7 +63,8 @@ export class ParentDashboard extends Component {
       if(role == 'admin')
   return (
     <div className='parent-dashboard'>
-      <ParentSidebar>
+            <ParentSidebar active="home">
+
       </ParentSidebar>
       <Navbar breadcrumbs='Tableau de bord'></Navbar>
       <h1 className='Welcome-name'>Bonjour Mr. {currentname}</h1> 
@@ -83,10 +84,11 @@ export class ParentDashboard extends Component {
       if(role == 'prof')
   return (
     <div className='parent-dashboard'>
-      <ParentSidebar>
+            <ParentSidebar active="home">
+
       </ParentSidebar>
       <Navbar breadcrumbs='Tableau de bord'></Navbar>
-      <h1 className='Welcome-name'>Bonjour {currentname}</h1> 
+      <h1 className='Welcome-name'>Bonjour Mr. {currentname}</h1> 
       <div className='parent-dashboard-widgets'>
         <div className='parent-dashboard-left'>
           <div className='parent-dashboard-top-widgets'>

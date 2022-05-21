@@ -8,7 +8,7 @@ export class ProfClasses extends Component {
       if(JSON.parse(sessionStorage.getItem('userData')).userData.role == "prof") 
       return (
         <div className='parent-dashboard'>
-        <ParentSidebar>
+        <ParentSidebar active="classes">
         </ParentSidebar>
         <Navbar breadcrumbs='Tableau de bord/ Mes Classes'></Navbar>
         <div className='parent-dashboard-widgets'>

@@ -23,7 +23,7 @@ export class AbsencesEtRetards extends Component {
           if(JSON.parse(sessionStorage.getItem('selectedEnfant')))
       return (
         <div className='parent-dashboard'>
-          <ParentSidebar>
+          <ParentSidebar  active="absences">
           </ParentSidebar>
           <Navbar breadcrumbs='Tableau de bord/ Absences et retards'></Navbar>
           <div className='parent-dashboard-widgets'>
@@ -40,7 +40,7 @@ export class AbsencesEtRetards extends Component {
       else 
       return (
         <div className='parent-dashboard'>
-        <ParentSidebar>
+        <ParentSidebar  active="absences">
         </ParentSidebar>
         <Navbar breadcrumbs='Tableau de bord/ Cours'></Navbar>
         <div className='parent-dashboard-widgets'>
@@ -57,7 +57,7 @@ export class AbsencesEtRetards extends Component {
       if(role == "eleve")
       return (
         <div className='parent-dashboard'>
-          <ParentSidebar>
+          <ParentSidebar  active="absences">
           </ParentSidebar>
           <Navbar breadcrumbs='Tableau de bord/ Absences et retards'></Navbar>
           <div className='parent-dashboard-widgets'>

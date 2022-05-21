@@ -16,7 +16,7 @@ export class Cours extends Component {
        if(JSON.parse(sessionStorage.getItem('selectedEnfant')))
        return (
          <div className='parent-dashboard'>
-         <ParentSidebar>
+          <ParentSidebar active="cours">
          </ParentSidebar>
          <Navbar breadcrumbs='Tableau de bord/ Cours'></Navbar>
          <div className='parent-dashboard-widgets'>
@@ -30,7 +30,7 @@ export class Cours extends Component {
        else 
         return (
           <div className='parent-dashboard'>
-          <ParentSidebar>
+          <ParentSidebar active="cours">
           </ParentSidebar>
           <Navbar breadcrumbs='Tableau de bord/ Cours'></Navbar>
           <div className='parent-dashboard-widgets'>
@@ -46,7 +46,7 @@ export class Cours extends Component {
         if(role == "eleve") 
         return (
           <div className='parent-dashboard'>
-          <ParentSidebar>
+          <ParentSidebar active="cours">
           </ParentSidebar>
           <Navbar breadcrumbs='Tableau de bord/ Cours'></Navbar>
           <div className='parent-dashboard-widgets'>

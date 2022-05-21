@@ -29,7 +29,7 @@ export class VoirPaiements extends Component {
         const month = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","août","Septembre","Octobre","Novembre","Decembre"];
       return (
         <div className='parent-dashboard'>
-          <ParentSidebar>
+          <ParentSidebar active="paiements">
           </ParentSidebar>
           <Navbar breadcrumbs='Tableau de bord/ Paiements'></Navbar>
           <div className='parent-dashboard-widgets'>

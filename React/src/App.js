@@ -21,6 +21,8 @@ import CahierTexte from "./CahierTexte";
 import ProfClasses from "./ProfClasses";
 import ClassePage from "./ClassePage";
 import MesClasses from "./MesClasses";
+import GestionUtilisateurs from "./GestionUtilisateurs";
+import GestionClasses from "./GestionClasses";
 function App() {
   return (
       <Routes>
@@ -41,6 +43,8 @@ function App() {
         <Route path="/dashboard/resultats" element={<ResultatsPage />} />
         <Route path="/dashboard/mes-classes" element={<ProfClasses />} />
         <Route path="/dashboard/mes-eleves/" element={<MesClasses />} />
+        <Route path="/dashboard/utilisateurs/" element={<GestionUtilisateurs />} />
+        <Route path="/dashboard/classes/" element={<GestionClasses />} />
         <Route path="/dashboard/mes-classes/:classe" element={<ClassePage />} />
         <Route path="/selectenfant" element={<SelectEnfant />} />
         <Route path="/dashboard/*" element={<Error404 />} />

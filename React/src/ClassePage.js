@@ -9,7 +9,7 @@ export default function ClassePage() {
   
     return (
         <div className='parent-dashboard'>
-          <ParentSidebar>
+          <ParentSidebar  active="classes">
           </ParentSidebar>
           <Navbar breadcrumbs='Tableau de bord/ Notes au parents'></Navbar>
           <div className='parent-dashboard-widgets'>

@@ -26,7 +26,7 @@ export class Notes extends Component {
 
     return (
       <div className='parent-dashboard'>
-        <ParentSidebar>
+        <ParentSidebar active="home">
         </ParentSidebar>
         <Navbar breadcrumbs='Tableau de bord/ Notes au parents'></Navbar>
         <div className='parent-dashboard-widgets'>

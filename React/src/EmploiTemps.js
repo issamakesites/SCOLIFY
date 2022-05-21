@@ -17,7 +17,7 @@ export class EmploiTemps extends Component {
           if(JSON.parse(sessionStorage.getItem('selectedEnfant')))
       return (
         <div className='parent-dashboard'>
-          <ParentSidebar>
+          <ParentSidebar active="emploi">
           </ParentSidebar>
           <Navbar breadcrumbs='Tableau de bord/ Emploi du temps'></Navbar>
           <div className='parent-dashboard-widgets'>
@@ -33,7 +33,7 @@ export class EmploiTemps extends Component {
       else 
       return (
         <div className='parent-dashboard'>
-        <ParentSidebar>
+        <ParentSidebar active="emploi">
         </ParentSidebar>
         <Navbar breadcrumbs='Tableau de bord/ Cours'></Navbar>
         <div className='parent-dashboard-widgets'>
@@ -50,7 +50,7 @@ export class EmploiTemps extends Component {
     if(role == "eleve")
     return (
       <div className='parent-dashboard'>
-        <ParentSidebar>
+        <ParentSidebar active="emploi">
         </ParentSidebar>
         <Navbar breadcrumbs='Tableau de bord/ Emploi du temps'></Navbar>
         <div className='parent-dashboard-widgets'>

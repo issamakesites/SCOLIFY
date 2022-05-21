@@ -14,7 +14,7 @@ export class VoirEnseignants extends Component {
        let role = currentuser.userData.role
   return (
     <div className='parent-dashboard'>
-      <ParentSidebar>
+      <ParentSidebar active="enseignants">
       </ParentSidebar>
       <Navbar breadcrumbs='Tableau de bord/ Enseignants'></Navbar>
       <div className='parent-dashboard-widgets'>
