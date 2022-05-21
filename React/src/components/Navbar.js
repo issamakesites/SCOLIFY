@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import bellshadow from './icons/bellshadow.svg'
 import avatar from './icons/avatar.svg'
 import faq from './icons/faq.svg'
 import axios from 'axios'
 import Logout from './Logout'
+import Notificon from './Notificon'
 
 export class Navbar extends Component {
     constructor(props){
         super(props)
         this.state = {
             breadcrumbs: props.breadcrumbs,
-            isopen: false
+            isopen: false,
+            notifnbr: ""
         }
     }
     toggleDropdown () {
@@ -45,9 +46,7 @@ export class Navbar extends Component {
                     </Link>
                 </li>
                 <li>
-                    <Link to='#'>
-                        <img src={bellshadow} />
-                    </Link>
+                    <Notificon></Notificon>
                 </li>
                 <li>
                     <span className='showdropdown' onClick={this.toggleDropdown.bind(this)}>

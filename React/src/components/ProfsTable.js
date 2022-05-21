@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import teacherdark from './icons/teacherdark.svg'
 import SelectEnfant from './SelectEnfant'
-import { useParams } from 'react-router'
+
 
 export class ProfsTable extends Component {
   constructor(props){
@@ -19,6 +19,7 @@ export class ProfsTable extends Component {
     let currentid = JSON.parse(sessionStorage.getItem('userData'));
     currentid = currentid.userData.id;
     this.setState({eleve: JSON.parse(sessionStorage.getItem('selectedEnfant'))}) 
+    
     axios.post("getprofs.php", JSON.stringify({
       eleve: JSON.parse(sessionStorage.getItem('selectedEnfant')),
       id: currentid,
@@ -31,6 +32,7 @@ export class ProfsTable extends Component {
     ).catch(
       err => console.log(err)
     )
+  
   }
   if(this.state.role == "eleve"){
     let currentid = JSON.parse(sessionStorage.getItem('userData'));

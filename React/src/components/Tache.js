@@ -9,16 +9,25 @@ export class Tache extends Component {
           matiere: props.matiere,
           date: props.date,
           deadline: props.deadline,
-          etat: props.etat
+          etat: props.etat,
+          role: props.role
       }
   }
   handleSubmit = e => {
     e.preventDefault();
     axios.post("checktask.php", JSON.stringify({
-      id: this.state.id
+      id: this.state.id,
+      role: this.state.role
       })).then(
       (res) => {this.setState({etat:1})
     }
+    ).catch(
+      err => console.log(err)
+    )
+    axios.post("generatetasknotif.php", JSON.stringify({
+      id: this.state.id,
+      role: this.state.role
+      })).then(
     ).catch(
       err => console.log(err)
     )
@@ -60,7 +69,7 @@ else
         <td>{this.state.matiere}</td>
         <td>{this.state.date}</td>
         <td>{this.state.deadline}</td>
-        <td><span className='tache-timedout' onClick={this.handleSubmit}>c'est passé</span></td>
+        <td><span className='tache-timedout'>c'est passé</span></td>
         </tr>
     )
   }

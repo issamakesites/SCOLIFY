@@ -39,14 +39,12 @@ export class SelectEnfant extends Component {
         }
       }
   render() {
-    
+
     return (
       <div>
           <form onSubmit={this.handleSubmit} className="selectstudentForm">
               <select name="eleve" onChange={(e) => {
                 this.setState({eleve: e.target.value});
-              //  console.log("Target value " + e.target.value)
-              //  console.log("State value " + this.state.eleve);
               }}>
                 {this.state.data.map((enfant) => 
                     <option key={enfant.id} value={enfant.id}>{enfant.nom} {enfant.prenom}</option>)
@@ -56,6 +54,7 @@ export class SelectEnfant extends Component {
           </form>
       </div>
     )
+    
   }
 }
 
