@@ -38,14 +38,14 @@ export class ParentSidebar extends Component {
             <li className='active'>
               <Link to="/dashboard/">
                 <img alt="" src={home} />
-                <p>Acceuil</p>
+                <p>Accueil</p>
               </Link>
              </li>
              :
              <li>
                <Link to="/dashboard/">
                 <img alt="" src={home} />
-                <p>Acceuil</p>
+                <p>Accueil</p>
               </Link>
              </li>}
 
@@ -185,14 +185,14 @@ export class ParentSidebar extends Component {
             <li className='active'>
               <Link to="/dashboard/">
                 <img alt="" src={home} />
-                <p>Acceuil</p>
+                <p>Accueil</p>
               </Link>
              </li>
              :
              <li>
                <Link to="/dashboard/">
                 <img alt="" src={home} />
-                <p>Acceuil</p>
+                <p>Accueil</p>
               </Link>
              </li>}
 
@@ -210,31 +210,73 @@ export class ParentSidebar extends Component {
                     <p>Mes eleves</p>
                   </Link>
               </li>}
-              
-              <li>
+           
+            {this.state.active == 'cours'?
+            <li className='active'>
                   <Link to="/dashboard/cours">
                     <img alt="" src={book} />
                     <p>Mes Cours</p>
                   </Link>
               </li>
-              <li>
+             :
+             
+             <li>
+                <Link to="/dashboard/cours">
+                  <img alt="" src={book} />
+                  <p>Mes Cours</p>
+                </Link>
+               </li>}
+           
+            {this.state.active == 'absences'?
+            <li className='active'>
                   <Link to="/dashboard/absences-retards">
                     <img alt="" src={retard} />
-                    <p>Absences et Retards</p>
+                    <p>Présence</p>
                   </Link>
               </li>
-              <li>
+             :
+             
+             <li>
+                  <Link to="/dashboard/absences-retards">
+                    <img alt="" src={retard} />
+                    <p>Présence</p>
+                  </Link>
+              </li>}
+              
+           
+            {this.state.active == 'tasks'?
+            <li className='active'>
                   <Link to="/dashboard/absences-retards">
                     <img alt="" src={tacheslight} />
-                    <p>Taches et Devoirs</p>
+                    <p>Devoirs</p>
                   </Link>
               </li>
-              <li>
+             :
+             
+             <li>
+             <Link to="/dashboard/absences-retards">
+               <img alt="" src={tacheslight} />
+               <p>Devoirs</p>
+             </Link>
+         </li>}
+           
+            {this.state.active == 'resultats'?
+            <li className='active'>
                   <Link to="/dashboard/resultats">
                     <img alt="" src={notes} />
-                    <p>Notes</p>
+                    <p>Resultats</p>
                   </Link>
               </li>
+             :
+             
+             <li>
+             <Link to="/dashboard/resultats">
+               <img alt="" src={notes} />
+               <p>Resultats</p>
+             </Link>
+         </li>}
+
+              
             </ul>
           </div>
       </div>
